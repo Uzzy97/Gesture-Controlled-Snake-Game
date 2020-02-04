@@ -198,6 +198,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 11.27, y: 10.93, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 1}
+  m_LocalPosition: {x: 24.819, y: 25.936, z: 0}
+  m_LocalScale: {x: 50, y: 50, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -280,6 +282,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0.0011679785, w: 0.99999934}
   m_LocalPosition: {x: 5.51, y: 2.45, z: -6.1}
   m_LocalScale: {x: 0.22629453, y: 0.22588892, z: 1}
+  m_LocalPosition: {x: 27.02, y: 31.96, z: -6.1}
+  m_LocalScale: {x: 0.4656266, y: 0.45912382, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
