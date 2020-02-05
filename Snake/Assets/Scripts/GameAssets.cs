@@ -17,5 +17,6 @@ using CodeMonkey.Utils;
     }
 
     public Sprite snakeHeadSprite;
+    public Sprite foodSprite;
 
 }
