@@ -26,7 +26,7 @@ public class LevelGrid : MonoBehaviour
 
         do{
              FoodPostion = new Vector2Int(Random.Range(0, width), Random.Range(0, height));
-        } while (snake.GetGridPostion() == FoodPostion);
+        } while (snake.GetFullSnakeGridPostion().IndexOf(FoodPostion) != -1);
        
         foodGameObject = new GameObject("Food", typeof(SpriteRenderer));
         foodGameObject.GetComponent<SpriteRenderer>().sprite = GameAssets.i.foodSprite;
@@ -34,12 +34,14 @@ public class LevelGrid : MonoBehaviour
 
     }
 
-    public void SnakeMoved(Vector2Int snakeGridPosition)
+    public bool TrySnakeEatFood(Vector2Int snakeGridPosition)
     {
         if(snakeGridPosition == FoodPostion) {
             Destroy(foodGameObject, 0.5F);
             SpawnFood();
-            CMDebug.TextPopupMouse("Snake eating food");
+            return true;
+        } else {
+            return false;
         }
     }
 }
