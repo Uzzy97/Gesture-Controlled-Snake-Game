@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using CodeMonkey;
 
-public class LevelGrid : MonoBehaviour
+public class LevelGrid
 {
     private Vector2Int FoodPostion;
     private GameObject foodGameObject;
@@ -43,5 +43,21 @@ public class LevelGrid : MonoBehaviour
         } else {
             return false;
         }
+    }
+
+    public Vector2Int ValidateGridPos(Vector2Int gridPosition){
+        if (gridPosition.x < 0){
+            gridPosition.x = width - 1;
+        }
+        if (gridPosition.x > width - 1){
+            gridPosition.x = 0;
+        }
+        if (gridPosition.y < 0){
+            gridPosition.y = height - 1;
+        }
+        if (gridPosition.y > height - 1){
+            gridPosition.y = 0;
+        }
+        return gridPosition;
     }
 }
